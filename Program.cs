@@ -1,9 +1,11 @@
 ﻿namespace Ezzatron.HelloCli;
 
+using Ezzatron.Hello;
+
 class Program
 {
   static void Main(string[] args)
   {
-    Console.WriteLine("Hello World!");
+    Console.WriteLine(Greeter.Greet(args[0]));
   }
 }
