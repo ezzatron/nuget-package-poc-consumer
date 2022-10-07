@@ -18,4 +18,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: dotnet restore
       - name: Run
-        run: dotnet run
+        run: dotnet run GitHub
