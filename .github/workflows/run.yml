@@ -18,13 +18,9 @@ jobs:
           dotnet-version: 6.0.x
 
       - name: Add credentials
-        run: |
-          nuget sources update -configfile nuget.config -name ezzatron -username github -password "${{ secrets.GITHUB_TOKEN }}" -storepasswordincleartext
-          cat nuget.config
+        run: nuget sources update -configfile nuget.config -name ezzatron -username github -password "${{ secrets.GITHUB_TOKEN }}" -storepasswordincleartext
 
       - name: Restore dependencies
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: dotnet restore
 
       - name: Run
