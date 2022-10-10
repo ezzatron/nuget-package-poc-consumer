@@ -1,6 +1,7 @@
 ﻿namespace Ezzatron.HelloCli;
 
 using Ezzatron.Hello;
+using Newtonsoft.Json;
 
 class Program
 {
@@ -13,7 +14,7 @@ class Program
       return 1;
     }
 
-    Console.WriteLine(Greeter.Greet(args[0]));
+    Console.WriteLine(JsonConvert.SerializeObject(Greeter.Greet(args[0])));
 
     return 0;
   }
