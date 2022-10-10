@@ -19,7 +19,7 @@ jobs:
 
       - name: Add credentials
         run: |
-          nuget sources update -configfile nuget.config -name ezzatron -username github -password "${{ secrets.GITHUB_TOKEN }}"
+          nuget sources update -configfile nuget.config -name ezzatron -username github -password "${{ secrets.GITHUB_TOKEN }}" -storepasswordincleartext
           cat nuget.config
 
       - name: Restore dependencies
